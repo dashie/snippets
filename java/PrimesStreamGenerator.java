@@ -34,10 +34,7 @@ public class PrimesStreamGenerator {
 		public abstract T init();
 
 		public final T get() {
-			if (value == null) {
-				value = init();
-			}
-			return value;
+			return value == null ? value = init() : value;
 		}
 	}
 
